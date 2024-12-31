@@ -1,0 +1,55 @@
+1)SQL TABLOSUNU oluşturduk  +                         
+2)FrmGirisler formumuzu oluşturduk  +   +
+3)FrmHastaGiris panel formunu oluşturuyoruz.  +  +
+4)FrmHastaKayit formunu oluşturuyoruz.  +  +
+5)FrmHastaDetay formu oluşturuyoruz.  +  +
+6)FrmBilgiDuzenle formu oluşturuyoruz. +  +
+7)SQL de Tbl_Randevular tablosu oluşturuyoruz.Bunun için; +
+  - Randevuİd    int
+  - RandevuTarih varchar10
+  - RandevuSaat varchar5
+  - RandevuBrans varchar30
+  - RandevuDoktor varchar20
+  - RandevuDurum bit (default 0 yap)
+  - HastaTC char11
+8)FrmDoktorGiris formu oluşturuyoruz. +
+9)FrmDoktorDetay formu oluşturuyoruz. + 
+10)FrmDoktorBilgiDuzenle formu oluşturuyoruz. +
+11)FrmDuyurular formu oluşturuyoruz. +
+12)FrmSekreter formu oluşturuyoruz.  +
+13)FrmSekreterDetay formu oluşturuyoruz. +
+14)FrmDoktorPaneli formu oluşturuyoruz. +
+15)FrmBrans formu oluşturuyoruz. + 
+16)FrmRandevuListesi formu oluşturuyoruz. +
+
+SQL CONNECTİON SINIFI OLUŞTURMA:
+1)Proje adına sağ tıklayıp Add kısmından Class ekliyoruz. 
+2)using System.Data.SqlClient; kütüphanemizi en başa ekliyoruz.
+3)public SqlConnection baglanti(){
+   SqlConnection baglan=new SqlConnection("Data Source = ASUS\\SQLEXPRESS; Initial Catalog = HastaneYonetim; Integrated Security = True");
+   baglan.Open();
+   return baglan();
+
+GİRİŞLER PANELİNDEKİ KISIMLARIN SAYFALARINA GİRİŞ YAPMA:
+1)Hasta butonuna çift tıklayıp:
+  FrmHastaGiris fr=new FrmHastaGiris();
+  fr.Show();
+  this.Hide();
+Diğer kısımlara da aynısını yapıyoruz.
+
+HASTA DETAY FORMU
+1)Hasta Giriş formundaki TC yi Hasta Detay formundaki labela yazdırdık.
+2)Hasta Ad Soyadını Hasta Detay formunda yazdırdık.
+3)Randevu durumunu DataGridView'e yazdırdık.
+4)Branşları comboboxta listeledik.
+
+***NOT***: INSERT, UPDATE, DELETE işlemlerinde ExecuteNonQuery komutu kullanılır.
+            
+
+
+
+
+
+
+
+
